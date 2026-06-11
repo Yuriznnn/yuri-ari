@@ -97,3 +97,21 @@ border-radius:15px;
 .final{
 padding-bottom:100px;
 }
+.music-controls{
+    margin-top:20px;
+}
+
+.music-controls button{
+    background:white;
+    color:#ff5e8a;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.music-controls button:hover{
+    transform:scale(1.05);
+}
