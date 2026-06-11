@@ -145,12 +145,12 @@
 <h2>📸 Nossos Momentos</h2>
 
 <div class="grid">
-<img src="fotos/foto1.png">
-<img src="fotos/foto2.png">
-<img src="fotos/foto3.png">
-<img src="fotos/foto4.png">
-<img src="fotos/foto5.png">
-<img src="fotos/foto6.png">
+<img src="fotos/foto1.png" onclick="abrirModal(this.src)">
+<img src="fotos/foto2.png" onclick="abrirModal(this.src)">
+<img src="fotos/foto3.png" onclick="abrirModal(this.src)">
+<img src="fotos/foto4.png" onclick="abrirModal(this.src)">
+<img src="fotos/foto5.png" onclick="abrirModal(this.src)">
+<img src="fotos/foto6.png" onclick="abrirModal(this.src)">
 </div>
 
 </section>
@@ -164,7 +164,13 @@
 </section>
 
 </div>
+<div id="modal" class="modal" onclick="fecharModal()">
 
+    <span class="fechar">&times;</span>
+
+    <img id="imgModal">
+
+</div>
 <script src="script.js"></script>
 
 </body>
