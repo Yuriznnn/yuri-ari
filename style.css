@@ -176,3 +176,11 @@ h1,h2,h3{
     font-size:40px;
     cursor:pointer;
 }
+.grid img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.grid img:hover{
+    transform:scale(1.03);
+}
