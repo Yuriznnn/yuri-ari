@@ -2,7 +2,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -114,4 +114,11 @@ padding-bottom:100px;
 
 .music-controls button:hover{
     transform:scale(1.05);
+}
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+}
+.hero h1{
+    font-size:4rem;
+    text-shadow:0 4px 15px rgba(0,0,0,.2);
 }
