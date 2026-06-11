@@ -86,3 +86,14 @@ function toggleMusic(){
 
     }
 }
+function abrirModal(src){
+
+    document.getElementById("modal").style.display="flex";
+
+    document.getElementById("imgModal").src=src;
+}
+
+function fecharModal(){
+
+    document.getElementById("modal").style.display="none";
+}
