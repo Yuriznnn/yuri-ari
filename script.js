@@ -1,9 +1,13 @@
 function entrar(){
 
-document.getElementById("intro").style.display="none";
-document.getElementById("site").style.display="block";
+    document.getElementById("intro").style.display="none";
+    document.getElementById("site").style.display="block";
 
-document.getElementById("music").play();
+    const music = document.getElementById("music");
+
+    music.volume = 0.4;
+
+    music.play();
 }
 
 const inicio = new Date("2025-12-02T00:00:00");
@@ -65,3 +69,20 @@ clearInterval(subir);
 }
 
 setInterval(criarCoracao,700);
+function toggleMusic(){
+
+    const music = document.getElementById("music");
+    const btn = document.getElementById("musicBtn");
+
+    if(music.paused){
+
+        music.play();
+        btn.innerHTML = "⏸️ Pausar Música";
+
+    }else{
+
+        music.pause();
+        btn.innerHTML = "▶️ Tocar Música";
+
+    }
+}
