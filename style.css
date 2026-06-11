@@ -122,3 +122,30 @@ h1,h2,h3{
     font-size:4rem;
     text-shadow:0 4px 15px rgba(0,0,0,.2);
 }
+.evento img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.duas-fotos{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.duas-fotos img{
+    width:45%;
+    min-width:250px;
+}
+
+.evento{
+    transition:.3s;
+}
+
+.evento:hover{
+    transform:translateY(-5px);
+}
