@@ -292,3 +292,13 @@ h1,h2,h3{
         transform:translateY(0);
     }
 }
+#intro.sumir{
+    animation:sumirIntro .8s ease forwards;
+}
+
+@keyframes sumirIntro{
+    to{
+        opacity:0;
+        transform:scale(1.03);
+    }
+}
