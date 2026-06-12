@@ -224,3 +224,27 @@ function mostrarMotivo(){
     motivo.innerHTML = motivos[aleatorio];
 
 }
+function criarBrilho(){
+
+    const brilho = document.createElement("div");
+
+    brilho.classList.add("sparkle");
+
+    brilho.innerHTML = "✨";
+
+    brilho.style.left = Math.random() * 100 + "vw";
+
+    brilho.style.fontSize =
+    (Math.random() * 12 + 10) + "px";
+
+    brilho.style.animationDuration =
+    (Math.random() * 8 + 8) + "s";
+
+    document.querySelector(".sparkles").appendChild(brilho);
+
+    setTimeout(() => {
+        brilho.remove();
+    },16000);
+}
+
+setInterval(criarBrilho,1000);
