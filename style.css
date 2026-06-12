@@ -1,127 +1,86 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-color:white;
-overflow-x:hidden;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
+    overflow-x:hidden;
 }
 
 #intro{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-button{
-padding:15px 35px;
-border:none;
-border-radius:30px;
-font-size:18px;
-cursor:pointer;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    z-index:1;
 }
 
 #site{
-display:none;
+    display:none;
+    position:relative;
+    z-index:1;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
 }
 
 section{
-padding:70px 20px;
-text-align:center;
+    padding:70px 20px;
+    text-align:center;
 }
 
-.hero h1{
-font-size:3rem;
-}
-
-.contador{
-margin-top:20px;
-font-size:1.4rem;
-}
-
-.carta{
-max-width:800px;
-margin:auto;
-background:rgba(255,255,255,.15);
-padding:25px;
-border-radius:15px;
-white-space:pre-line;
-}
-
-.timeline{
-max-width:900px;
-margin:auto;
-}
-
-.evento{
-margin:20px;
-padding:20px;
-background:rgba(255,255,255,.15);
-border-radius:15px;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.card{
-background:white;
-color:#ff5e8a;
-padding:15px;
-border-radius:15px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.grid img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-}
-
-.final{
-padding-bottom:100px;
-}
-.music-controls{
-    margin-top:20px;
-}
-
-.music-controls button{
-    background:white;
-    color:#ff5e8a;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.music-controls button:hover{
-    transform:scale(1.05);
-}
 h1,h2,h3{
     font-family:'Playfair Display',serif;
 }
+
 .hero h1{
     font-size:4rem;
     text-shadow:0 4px 15px rgba(0,0,0,.2);
 }
+
+.contador{
+    margin-top:20px;
+    font-size:1.4rem;
+}
+
+.carta{
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,.15);
+    padding:25px;
+    border-radius:15px;
+    white-space:pre-line;
+}
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.evento{
+    margin:20px;
+    padding:20px;
+    background:rgba(255,255,255,.15);
+    border-radius:15px;
+    transition:.3s;
+}
+
+.evento:hover{
+    transform:translateY(-5px);
+}
+
 .evento img{
     width:100%;
     max-width:500px;
@@ -142,13 +101,74 @@ h1,h2,h3{
     min-width:250px;
 }
 
-.evento{
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.card{
+    background:white;
+    color:#ff5e8a;
+    padding:15px;
+    border-radius:15px;
+}
+
+.music-controls{
+    margin-top:20px;
+}
+
+.music-controls button,
+.botao-surpresa{
+    background:white;
+    color:#ff5e8a;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
     transition:.3s;
 }
 
-.evento:hover{
-    transform:translateY(-5px);
+.music-controls button:hover,
+.botao-surpresa:hover{
+    transform:scale(1.05);
 }
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    justify-items:center;
+}
+
+.grid img{
+    width:100%;
+    max-width:220px;
+    height:260px;
+    object-fit:cover;
+    border-radius:10px;
+    padding:10px;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.grid img:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.grid img:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.grid img:hover{
+    transform:scale(1.08) rotate(0deg);
+}
+
 .modal{
     display:none;
     position:fixed;
@@ -176,48 +196,7 @@ h1,h2,h3{
     font-size:40px;
     cursor:pointer;
 }
-.grid img{
-    cursor:pointer;
-    transition:.3s;
-}
 
-.grid img:hover{
-    transform:scale(1.03);
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    justify-items:center;
-}
-
-/* estilo polaroid premium */
-.grid img{
-    width:100%;
-    max-width:220px;
-    height:260px;
-    object-fit:cover;
-    border-radius:10px;
-    padding:10px;
-    background:white;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-    cursor:pointer;
-    transition:.3s;
-}
-
-/* efeito alternado (parece álbum real) */
-.grid img:nth-child(odd){
-    transform:rotate(-2deg);
-}
-
-.grid img:nth-child(even){
-    transform:rotate(2deg);
-}
-
-/* hover mais emocional */
-.grid img:hover{
-    transform:scale(1.08) rotate(0deg);
-}
 .surpresa-amor{
     text-align:center;
     padding:70px 20px;
@@ -227,17 +206,6 @@ h1,h2,h3{
     margin:15px auto 25px;
     max-width:600px;
     font-size:1.1rem;
-}
-
-.botao-surpresa{
-    background:white;
-    color:#ff5e8a;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.botao-surpresa:hover{
-    transform:scale(1.05);
 }
 
 .motivo{
@@ -251,6 +219,11 @@ h1,h2,h3{
     display:none;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
+
+.final{
+    padding-bottom:100px;
+}
+
 .sparkles{
     position:fixed;
     top:0;
@@ -287,10 +260,4 @@ h1,h2,h3{
         transform:translateY(-100px);
         opacity:0;
     }
-}
-
-#intro,
-#site{
-    position:relative;
-    z-index:1;
 }
