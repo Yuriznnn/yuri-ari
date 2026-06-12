@@ -1,12 +1,17 @@
 function entrar(){
 
-    document.getElementById("intro").style.display="none";
-    document.getElementById("site").style.display="block";
-
+    const intro = document.getElementById("intro");
+    const site = document.getElementById("site");
     const music = document.getElementById("music");
 
-    music.volume = 0.4;
+    intro.classList.add("sumir");
 
+    setTimeout(() => {
+        intro.style.display="none";
+        site.style.display="block";
+    },800);
+
+    music.volume = 0.4;
     music.play();
 }
 
