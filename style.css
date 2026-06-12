@@ -261,3 +261,34 @@ h1,h2,h3{
         opacity:0;
     }
 }
+.intro-content{
+    animation:aparecerIntro 1.8s ease forwards;
+    opacity:0;
+    transform:translateY(25px);
+}
+
+.intro-content h1{
+    font-size:4.5rem;
+    margin-bottom:10px;
+    text-shadow:0 5px 20px rgba(0,0,0,.18);
+}
+
+.intro-content p{
+    font-size:1.15rem;
+    max-width:600px;
+    margin:0 auto 18px;
+}
+
+.intro-content span{
+    display:block;
+    margin-top:18px;
+    font-size:.95rem;
+    opacity:.9;
+}
+
+@keyframes aparecerIntro{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
